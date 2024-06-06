@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.calculator {
+    border: 2px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark .calculator {
+    background-color: #555;
+    border-color: #bbb;
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#theme-button {
+    padding: 5px 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark #theme-button {
+    background-color: #bbb;
+    color: #ffffff;
+}
+
+.display {
+    font-size: 2em;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark .display {
+    background-color: #666;
+    border-color: #888;
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+    color: #000; /* Default button text color */
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Slightly increase the size of the button on hover */
+}
+
+.btn.operator {
+    background-color: #f9a825;
+    border: 1px solid #ccc; /* Default border color for operator buttons */
+}
+
+body.dark .btn {
+    background-color: #444;
+    border-color: #fff; /* Change border color to white for dark theme */
+    color: #fff; /* Change text color for dark theme */
+}
+
+body.dark .btn.operator {
+    background-color: #ffb300;
+    border-color: #fff; /* Change border color to white for operator buttons in dark theme */
+}
